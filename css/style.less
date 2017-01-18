@@ -1,0 +1,283 @@
+/*
+File Name: style.less
+Date: 08/14/2016
+Programmer: Erik Burnham
+*/
+
+/* MOBILE STYLESHEET */
+
+/* Color Palette */
+
+@import 'palette.less';
+  
+
+/* Other Decoration Declarations */
+
+@import 'mixins.less';
+@import 'elements.less';
+
+/* End Other Decoration Declarations */
+
+/* Parametric mixins for font attributes */
+
+.headerFontAttributes(@fontColor; @fontSize) {
+    color: @fontColor; 
+    
+    text-transform: uppercase;
+}
+
+/* End parametric mixins for font attributes */
+
+
+    
+/* MOBILE STYLESHEET */
+
+
+body {
+    font-family: "Oxygen", sans-serif;
+    font-size: 16px;
+    line-height: 1.5em;
+    background-image:url(../images/indian_background_opaque.png);
+    color: @darkColor;
+    h2 {
+        font-family: "Dosis", sans-serif;
+        font-weight: bold;
+        padding-bottom: 1em;
+    }
+    
+    
+}
+a {
+    text-decoration: none;
+    &:visited {
+        color: @color1;
+    }
+    }
+
+header {
+    .headerFontAttributes(@darkColor; 4em;);
+    font-family: 'Montserrat', sans-serif;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-right: 2em;
+    h1 {
+        color: @darkColor;
+        text-align: center;
+        font-size: 3em
+    }
+    img{
+        background-color: @color5;
+        width: 100%;
+        padding-top: 2em;
+        padding-right: 2em;
+    }
+    
+}   
+    
+nav {
+    line-height: 1.5;
+    font-size: 1.25em;
+    background-color: @color3;
+    font-family: 'Montserrat', sans-serif;
+
+    li{
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1em;
+        width: 60%;
+        background-color: @color3;
+        color: @color2;
+        }
+    a {
+    &:link {
+        color: @color2;
+    }
+    &:visited {
+        color: @lightColor;
+    }
+       
+}
+}
+
+main {
+    background-color:@lightColor;
+    h2 {
+        padding-top: 1em;
+        font-size: 2em;
+        text-align: center;
+    }
+    h3{
+        font-weight: bold;
+        text-decoration: underline;
+        text-align: center;
+    }
+    p{
+        padding: 1em;
+        }
+    img{
+        
+        width: 100%;
+        }
+    li{
+        font-size: .8em;
+        margin-left: 7%;
+        margin-right: 50%;
+        }
+    
+      
+
+    #menu p{
+        text-align: center;
+        font-weight: bold;
+        padding: 2em;
+        }
+
+    #menu img{
+        width: 40%;
+        padding-left: 1em;
+        }
+
+
+    #options figure{
+        
+            img{
+                float:right;
+                width: 30%;
+                padding-left: .5em;
+                padding-top: 2em;
+                
+                }
+            figcaption{
+                float: right;
+                width: 25%;
+                margin-left: 50%;
+                font-size: .65em;
+                text-align: center;
+                
+            }
+            }
+        }
+
+#map img{
+    height: 10em;
+}
+#map p{
+    font-size: .75em;
+    text-align: center;
+}
+#contact p{
+    text-align: center;
+    font-weight: bold;
+}
+
+
+footer {
+    background-color: @color4;
+    h2 {
+        padding-top:1em;
+        font-weight: bold;
+        font-size: 1.5em;
+        text-align: center;
+        font-family: 'Dosis', sans-serif;
+    }
+    h3 {
+        text-align: center;
+    }
+    #social1 img{
+        width: 25%;
+        margin-left: 15%;
+        margin-bottom: 2em;
+        }
+    
+    #social2 img{
+        width: 25%;
+        margin-left: 15%;
+        }
+    
+    a{
+       &:link {
+        color: @lightColor;
+    }
+    &:visited {
+        color: @darkColor;
+    }
+
+    }
+    
+}
+
+/* Tablet CSS code and up */
+@media only screen and (min-width: 481px) {
+
+    nav{
+        background-color: @color1;
+        padding-top: 2em;
+        li{  
+            float: left;
+            display: inline;
+            font-family: 'Montserrat', sans-serif;
+            background-color: @color3;
+            color: @color2;
+            width: 25%;
+            font-size: 1.25em
+            }
+        }
+    main{
+        font-size: 1.5em;
+        line-height: 1.5em;
+        p{
+            padding-left: 1.5em;
+            padding-right: 1em;
+            } 
+    }
+    #options figure{
+        
+            img{
+                float:right;
+                width: 30%;
+                margin-right: 5%;
+                padding-left: .5em;
+                padding-top: 2em;
+                
+                }
+            figcaption{
+                float: right;
+                width: 25%;
+                margin-left: 50%;
+                margin-right: 5%;
+                font-size: .65em;
+                text-align: center;
+                
+            }
+            }
+    #map p{
+        font-size: 1em;
+        text-align: center;
+    }
+    footer{ 
+        h2{
+           font-size: 3em; 
+        }
+    }
+    #social1 {
+            width: 35%;
+            margin-left: 33%;
+        }
+    #social2 {
+           width: 35%;
+            margin-left: 33%;
+        }   
+        
+        
+    }
+    
+
+/* Desktop CSS code and up */
+@media only screen and (min-width: 1025px) {
+    body{
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+}
